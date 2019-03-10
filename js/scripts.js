@@ -29,7 +29,7 @@ $(function () {
        
         $('html, body').animate({
            
-            scrollTop: $('#' + $(this).data('value')).offset().top - 60
+            scrollTop: $($(this).data('value')).offset().top - 60
             
         }, 1000);
         
@@ -62,17 +62,17 @@ $(function () {
 
 		$("section").each(function () {
 
-			var dd = $(this).attr('id'),
+			var bb = $(this).attr('id'),
 				hei = $(this).outerHeight(),
 				grttop	= $(this).offset().top - 70;
 
 			if ($(window).scrollTop() > grttop && $(window).scrollTop() < grttop + hei) {
 
-				$(".navbar .navbar-nav .nav-item a[href='#" + dd + "']").parent().addClass('active');
+				$(".navbar .navbar-nav .nav-item a[href='#" + bb + "']").parent().addClass('active');
 
 			} else {
 
-				$(".navbar-nav .nav-item a[href='#" + dd + "']").parent().removeClass('active');
+				$(".navbar-nav .nav-item a[href='#" + bb + "']").parent().removeClass('active');
 
 			}
 		});
